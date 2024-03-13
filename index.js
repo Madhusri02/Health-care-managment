@@ -124,6 +124,21 @@ run.post('/create-time' , async function(request , response){
     }
 })
 
+//feth user from db
+run.get('/get-user' , async function(request , response){
+    try{
+        const data = await login_details.find()
+        response.status(200).json(data)
+        console.log("done everything !")
+        }
+        catch(error) {
+            response.status(500).json({
+                "status" : "not connected" ,
+                "context" : "entry not available !"
+            })
+        }
+})
+
 // to add user
 run.post('/signup' , async function(request , response){
     try{
