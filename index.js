@@ -142,7 +142,7 @@ run.get('/get-user' , async function(request , response){
 // to add user
 run.post('/signup' , async function(request , response){
     try{
-        console.log("2")
+        console.log("444444444444444")
         await login_details.create({
             "user_id"  : request.body.user_id , 
             "password" : request.body.password , 
